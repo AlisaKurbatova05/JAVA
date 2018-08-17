@@ -1,0 +1,66 @@
+/**
+ Java Level 1 Lesson 2 Homework
+
+ @author Alisa Kurbatova
+ @version Aug 17, 2018
+ */
+
+public class Lesson2{
+    public static void main(String[] args) {
+        int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 1};
+        int arrll = arr.length;
+        System.out.print("Задание 1:  ");
+        System.out.println(" ");
+        for (int i = 0; i < arrll; i++) {
+            if (arr[i] == 1) arr[i] = 0;
+            else arr[i] = 1;
+        }
+        for (int i = 0; i < arrll; i++) {
+           System.out.println(arr[i]);
+        }
+
+            System.out.println(" ");
+            int[] array = new int[8];
+            int j = 0;
+            int fill = array.length;
+            System.out.print("Задание 2:  ");
+            System.out.println(" ");
+        for (int a = 0; a < fill; ++a, j = j + 3) {
+                array[a] = j;
+                System.out.print(+array[a] + " ");
+                System.out.println(" ");
+            }
+
+            System.out.println(" ");
+            int[] mass = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+            int massiv = mass.length;
+            for (int b = 0; b < massiv; b++){
+                if (mass[b] < 6)
+                    mass[b] = mass[b] * 2;
+            }
+        System.out.print("Задание 3:  ");
+        System.out.println(" ");
+        for (int b = 0; b < massiv; b++) {
+            System.out.println(mass[b]);
+        }
+
+        System.out.println(" ");
+        int[] mas = {8, 3, 10, 2, 1, 6, 12, 20, 0};
+        int min = mas[0], max = mas[0], i;
+        System.out.print("Задание 5:  ");
+        System.out.println(" ");
+        for(i = 0; i != mas.length; i++) {
+            if(mas[i] < min){
+                min = mas[i];
+            }
+            if(mas[i] > max){
+                max = mas[i];
+            }
+            System.out.println("max = "+max+" min = "+min);
+        }
+    }
+}
+
+
+
+
