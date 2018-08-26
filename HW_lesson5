@@ -1,0 +1,55 @@
+/**
+ Java Level 1 Lesson 5 Homework
+
+ @author Alisa Kurbatova
+ @version Aug 26, 2018
+ */
+
+class Sotrudnic{
+     String surname;
+     String name;
+     String patronymic;
+     String position;
+     String email;
+     int number;
+     int salary;
+    private int age;
+    Sotrudnic (String surname, String name, String patronymic, String position, String email, int number, int salary, int age){
+        this.surname = surname;
+        this.name = name;
+        this.patronymic = patronymic;
+        this.position = position;
+        this.email = email;
+        this.number = number;
+        this.salary = salary;
+        this.age = age;
+    }
+    void getInfo (){
+        System.out.println(surname + ", " + name + ", " + patronymic + ", " +  position + ", " + email + ", " + number + ", " +
+                salary + ", " + age);
+    }
+    void setAge (int age) {
+        if (age > 0)
+        this.age = age;
+    }
+    int getAge (){
+        return age;
+    }
+}
+class HW_5 {
+    public static void main(String[] args){
+        Sotrudnic[] sotr = new Sotrudnic[5];
+        sotr[0] = new Sotrudnic("Ivanov", "Ivan", "Ivanovich", "Ingeneer", "ivanovII@mailbox.com",
+                892312312,15000,45);
+        sotr[1] = new Sotrudnic("Smirnov", "Nikolay", "Nikolaevich", "Menger", "smirnovNN@mailbox.com",
+                895123465,70000,25);
+        sotr[2] = new Sotrudnic("Burkov", "Denic", "Konstantinovich", "Developer", "BurkovDK@mailbox.com",
+                895123487,40000,19);
+        sotr[3] = new Sotrudnic("Korablev", "Andrey", "Vasilev", "Programmer", "KorablevAV@mailbox.com",
+                895123489,25000,30);
+        sotr[4] = new Sotrudnic("Trubacov", "Pavel", "Alekseev", "Administrator", "TrubakovPA@mailbox.com",
+                895125467,30000,56);
+        for (Sotrudnic  s : sotr) if (s.getAge() > 40) s.getInfo();
+    }
+}
+
